@@ -1,7 +1,7 @@
 # DIS17.1
 ***
 ### Installations
-* clone this file by using `git clone`
+* clone this file by using `git clone https://github.com/Wanille/DIS17.1.git`
 * Open terminal
 * use `cd` to navigate into this folder
 * Install Elasticsearch with [these instructions](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/targz.html). But skip step *`Enable automatic creation of system indices`* 
