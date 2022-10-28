@@ -42,6 +42,7 @@ password = "YOUR_PASSWORD_HERE"
 * Go to Kernel > Change Kernel
 * Select .elastic_env
 * start elasticsearch by opening another terminal navigating into your elasticsearch-SOME_VERSION_NUMBER folder and run `./bin/elasticsearch`
+* Now run the [Test Notebook](./Test.ipynb)
 ***
 
 ### On every startup
