@@ -130,3 +130,6 @@ dmypy.json
 
 # Credentials File
 credentials.py
+
+# elasticsearch dir
+elasticsearch*/
