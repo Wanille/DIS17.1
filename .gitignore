@@ -134,3 +134,6 @@ credentials.py
 
 # elasticsearch dir
 elasticsearch*/
+
+# Data directory
+data/
