@@ -137,3 +137,6 @@ elasticsearch*/
 
 # Data directory
 data/
+
+# DS Store removed
+.DS_Store
