@@ -43,6 +43,11 @@ password = "YOUR_PASSWORD_HERE"
 * Select .elastic_env
 * start elasticsearch by opening another terminal navigating into your elasticsearch-SOME_VERSION_NUMBER folder and run `./bin/elasticsearch`
 * Now run the [Test Notebook](./Test.ipynb)
+
+### Install elasticvue to get elastic GUI
+
+* install from https://elasticvue.com/
+
 ***
 
 ### On every startup
