@@ -63,3 +63,7 @@ On terminal 2 run:
 cd elasticsearch-SOME_VERSION_NUMBER
 ./bin/elasticsearch
 ```
+
+Or run:
+
+``` sh startup.sh ```
