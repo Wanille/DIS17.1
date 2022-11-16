@@ -64,6 +64,6 @@ cd elasticsearch-SOME_VERSION_NUMBER
 ./bin/elasticsearch
 ```
 
-Or run:
+Or run: 
 
 ``` sh startup.sh ```
