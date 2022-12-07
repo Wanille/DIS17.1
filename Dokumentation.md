@@ -1,9 +1,9 @@
 ## Indexing Data
 Es kann nur eins von beiden verwendet werden: Entweder Noramlizer oder Analyzer.
 Wir überprüfen, Number ret, Number rel, Number rel rev, Pressicion, Pressicion at 5 (10,15,20,25)
---> Normalizer wird nicht verwendet, da er nur auf Keywords angewandt werden kann 
---> Für Volltextsuche brauchen wir einen Analyzer 
-Verbesserung von Analyzer: 
-- lowercase
-- asciifolding
-- classic 
+
+### Session 2022-12-07
+
+- Entscheidung ob analyzer oder normalizer benutzt wird --> ANALYZER (wegen Volltextsuche)
+- Filter eingefügt : lowercase, sciifolding, classic, synonym
+- synonymfilter für COVID19 wörter aller art --> SUPI
