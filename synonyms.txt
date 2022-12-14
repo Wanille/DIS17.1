@@ -1,1 +1,1 @@
-covid, covid-19, coronavirus => coronavirus
+covid, covid-19, coronavirus, sars-cov-2, sars-cov2, sars-cov, chinavirus => coronavirus
