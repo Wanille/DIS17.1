@@ -140,3 +140,6 @@ data/
 
 # DS Store removed
 .DS_Store
+
+# Pycharm
+.idea/
