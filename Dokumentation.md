@@ -46,3 +46,19 @@ synonyme :
 
 - COVID19 synonymfilter eingebaut
 - Ältere Dokumente nach hinten schieben Query (boosting)
+
+### Session 2023-01-04
+
+Überlegungen zu Query analysis, weil piepline nicht funktioniert hat (nils wir brauchen dich)
+
+#### Boosting 
+wir benutzen: multiplicative boosting => function query 
+
+- weight von multi match erhöhen 
+- nur ein feld boosten mit ^ ( welche felder brauchen wir ?)
+- type von query verändern z.b. best_fields
+
+- anfrage instanz an elasticsearch verändern, z.b. auch question 
+- query field, source_x, author und journal macht wenig sinn bei den queries
+
+
