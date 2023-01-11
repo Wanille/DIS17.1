@@ -27,11 +27,14 @@ def main():
     topics_path = "data/topics-rnd5_covid-complete.xml"
     qrels_path = "data/qrels-covid_d5_j0.5-5_covid-complete.txt"
 
-    run_path = create_run(topics_path=topics_path, es=es, index="test_index")
-    eval = create_eval(qrels_path, run_path=f"data/runs/{run_path}")
+    runs_folder = "runs/"
 
-    with open(f"data/runs/{run_path}.info", "w") as fp:
-        fp.write(f"Info file for run: {run_path}\n\n")
+    run_name = create_run(topics_path=topics_path, es=es, index="test_index", runs_folder=runs_folder)
+    run_path = runs_folder + run_name
+    eval = create_eval(qrels_path, run_path=run_path)
+
+    with open(f"{run_path}.info", "w") as fp:
+        fp.write(f"Info file for run: {run_name}\n\n")
         fp.write(f"Settings: ")
         fp.write(json.dumps(settings, indent=1))
         fp.write("\n\n")

@@ -6,12 +6,12 @@ import pytrec_eval
 import json
 
 
-def create_run(topics_path: str, es: Elasticsearch, index: str) -> str:
+def create_run(topics_path: str, es: Elasticsearch, index: str, runs_folder: str) -> str:
     
     topics = load_topics(topics_path=topics_path)
     run_name = datetime.strftime(datetime.now(), "%d.%m-%H:%M") + ".txt"
 
-    with open(f"data/runs/{run_name}", "w") as fp:
+    with open(f"{runs_folder}{run_name}", "w") as fp:
         for idx, doc in topics.iterrows():
             hits = search(doc["query"], es, index)
             
