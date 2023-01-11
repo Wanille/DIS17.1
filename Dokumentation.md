@@ -61,4 +61,12 @@ wir benutzen: multiplicative boosting => function query
 - anfrage instanz an elasticsearch verändern, z.b. auch question 
 - query field, source_x, author und journal macht wenig sinn bei den queries
 
+### Session 2023-01-11
+Wir haben hinuugefügt:
 
+- Negatives Boosting von älteren Dokumenten, mit einer Scale von 20 Monaten und einem Cutoff von 3 Monaten
+- Wir erhoffen uns dadurch ein besseres Suchergebniss durch relevantere/modernere Dokumente
+
+- Änderungen an der Index Pipeline:
+     - Neu Indexierung kann nun "geskipped" werden, nur Anfrage wird gestellt
+     - Ausgabedatei nun nicht mehr .txt sondern .json, dadurch bessere importmöglichkeiten für evtl. visualisierung 
