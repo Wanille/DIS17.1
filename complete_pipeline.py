@@ -2,6 +2,7 @@ from ElasticSettings.analyze_settings import settings
 from ElasticSettings.mappings import mappings
 from ElasticSettings.index_data import index_data, clean_data
 from ElasticSettings.topics import create_run, create_eval
+from ElasticSettings.query import get_query
 from elasticsearch import Elasticsearch
 from credentials import username, password
 import json
@@ -39,9 +40,11 @@ def main(skip_index: bool = False):
     run_dict["info"] = run_name
     run_dict["settings"] = settings
     run_dict["mappings"] = mappings
+    run_dict["query"] = get_query(q="<sample_query>")
     run_dict["evaluation"] = eval
+    
 
     json.dump(run_dict, open(f"{run_path}.info", "w"), indent=1)
 
 if __name__ == '__main__':
-    main(skip_index=False)
+    main(skip_index=False)  
