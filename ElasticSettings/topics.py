@@ -9,7 +9,7 @@ import json
 def create_run(topics_path: str, es: Elasticsearch, index: str, runs_folder: str) -> str:
     
     topics = load_topics(topics_path=topics_path)
-    run_name = datetime.strftime(datetime.now(), "%d.%m-%H:%M") + ".txt"
+    run_name = datetime.strftime(datetime.now(), "%y.%m.%d_%H:%M") + ".txt"
 
     with open(f"{runs_folder}{run_name}", "w") as fp:
         for idx, doc in topics.iterrows():
