@@ -70,3 +70,10 @@ Wir haben hinuugefügt:
 - Änderungen an der Index Pipeline:
      - Neu Indexierung kann nun "geskipped" werden, nur Anfrage wird gestellt
      - Ausgabedatei nun nicht mehr .txt sondern .json, dadurch bessere importmöglichkeiten für evtl. visualisierung 
+ 
+ ### Session 2023-01-13
+ 
+ Wir hatten eine extrem schlechte P5 (0.29) und num_rel_ret 608 ( Baseline im Vergleich ~9000)
+ Wir haben unsere query zurück auf Werkseinstellung gesetzt und ein besseres Ergebnis erhalten P5 0.468 und num_rel_ret 9965
+ 
+ Plan: Herausfinden was bei Query analysis schief geht.
