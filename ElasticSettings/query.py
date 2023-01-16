@@ -13,17 +13,16 @@ def get_query(q: str):
                                 "journal",
                                 "authors"
                                 ]}},
-                    "gauss": {
+                    "exp": {
                         "publish_time": {
-                            "origin": "2021-12-31",
-                            "scale": "20m",
-                            "offset": "3m",
-                            "decay": 0.3
+                            "origin": "2020-05-15",
+                            "scale": "4m",
+                            "offset": "1m",
+                            "decay": 0.5
                         }
                     }
-                  },
-            
-                
+                  }       
         }
     }
+
     return query

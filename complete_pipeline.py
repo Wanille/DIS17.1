@@ -47,4 +47,4 @@ def main(skip_index: bool = False):
     json.dump(run_dict, open(f"{run_path}.info", "w"), indent=1)
 
 if __name__ == '__main__':
-    main(skip_index=False)  
+    main(skip_index=True)  

@@ -44,7 +44,7 @@ def load_topics(topics_path: str) -> pd.DataFrame:
 
 
 def search(q: str, es: Elasticsearch, index: str) -> list:
-    q = get_query(q=q)
-    result = es.search(index=index, body=q, size=1000)
+    # q = get_query(q=q)
+    result = es.search(index=index, q=q, size=1000)
     hits = result["hits"]["hits"]
     return hits
