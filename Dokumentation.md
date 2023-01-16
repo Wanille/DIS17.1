@@ -77,3 +77,11 @@ Wir haben hinuugefügt:
  Wir haben unsere query zurück auf Werkseinstellung gesetzt und ein besseres Ergebnis erhalten P5 0.468 und num_rel_ret 9965
  
  Plan: Herausfinden was bei Query analysis schief geht.
+ 
+ ### Session 2023-01-16
+ 
+ query-parameter tuning --> beste Parameter-einstellung finden 
+ automatisches tuning doch zu aufwändig
+ - wenn publish-time function-score eingefügt wird, verschlechtert sich der MAP-wert enorm auf 0.0035 (ohne 0.19)
+ - synonym filter hat map-wert auf 0.2029 gebracht(Verbesserung um 0.0007) num_rel_ret ist auf 10276 (148) gestiegen 
+ 
