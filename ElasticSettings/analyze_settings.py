@@ -4,7 +4,7 @@ settings = {
             "my-analyzer": {
                 "type": "custom",
                 "tokenizer": "standard",
-                "filter": ["lowercase", "stop", "asciifolding", "classic", "snowballer", "synonym"]
+                "filter": ["lowercase", "stop", "synonym", "snowballer"]
           } 
         },
         "filter": {

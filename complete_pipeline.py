@@ -5,12 +5,20 @@ from ElasticSettings.topics import create_run, create_eval
 from ElasticSettings.query import get_query
 from elasticsearch import Elasticsearch
 from credentials import username, password
+import os
 import json
+
+from pprint import pprint
+
+import logging
 
 
 def main(skip_index: bool = False):
     es = Elasticsearch("http://localhost:9200",
-            basic_auth=(username, password))
+            basic_auth=(username, password),
+            request_timeout=60,
+            retry_on_timeout=True,
+            max_retries=10)
 
     index_name = "test_index"
 
@@ -22,7 +30,7 @@ def main(skip_index: bool = False):
         except:
             pass
 
-        es.indices.create(index=index_name, mappings=mappings, settings=settings, timeout="60s")
+        es.indices.create(index=index_name, mappings=mappings, settings=settings)
         index_data(df=data, index=index_name, es=es)
         
 
@@ -46,5 +54,12 @@ def main(skip_index: bool = False):
 
     json.dump(run_dict, open(f"{run_path}.info", "w"), indent=1)
 
+    print("map", run_dict["evaluation"]["map"])
+    print("P5", run_dict["evaluation"]["P_5"])
+    print("P10", run_dict["evaluation"]["P_10"])
+    print("P100", run_dict["evaluation"]["P_100"])
+    print("rel_ret", run_dict["evaluation"]["num_rel_ret"])
+    
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.ERROR)
     main(skip_index=True)  

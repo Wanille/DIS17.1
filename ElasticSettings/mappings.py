@@ -3,7 +3,7 @@ mappings = {
         "cord_uid": {"type": "keyword"},
         "sha": {"type": "keyword"},
         "source_x": {"type": "keyword"},
-        "title":{"type": "text"},
+        "title":{"type": "text", "analyzer": "my-analyzer"},
         "doi": {"type": "keyword"},
         "pmcid": {"type": "keyword"},
         "pubmed_id": {"type": "integer"},
