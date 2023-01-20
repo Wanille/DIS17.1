@@ -14,6 +14,8 @@ ToDos für Abgabe am 23.01.23:<br>
   -non (Pandas Wert für leeres Datenfeld)<br>
   -Indexing<br>
   -ETL-process<br>
+  -Tokens<br>
+  -matchen (zwischen query und documents)<br>
 </p>
 <p>-Muss ein Abkürzungsverzeichnis erstellt werden?<br>
  -bspw.<br>
