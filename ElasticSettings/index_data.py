@@ -2,7 +2,10 @@ import pandas as pd
 from numpy import float32
 import logging
 from elasticsearch import Elasticsearch
+from elasticsearch.client import IndicesClient
 from elasticsearch.helpers import bulk
+
+from ElasticSettings.synonyms import synonyms_replacer
 
 logging.basicConfig(level=logging.INFO)
 
@@ -11,6 +14,8 @@ def clean_data(metadata_path: str) -> pd.DataFrame:
     md = pd.read_csv(metadata_path)
     md_sorted = md.iloc[md.isnull().sum(1).sort_values(ascending=1).index]
     md_unique = md_sorted.drop_duplicates(subset=["cord_uid"], keep="first").copy()
+    # md_unique["abstract_processed"] = md_unique["abstract"].apply(synonyms_replacer)
+    # md_unique["title_processed"] = md_unique["title"].apply(synonyms_replacer)
     md_unique.reset_index(inplace=True, drop=True)
 
     for col in ["pubmed_id", "arxiv_id"]:
@@ -28,14 +33,16 @@ def check_float(value) -> bool:
 
     
 def index_data(df: pd.DataFrame, index: str, es: Elasticsearch):
+    ic = IndicesClient(es) 
     bulk_data = []
     
     for idx, doc in df.iterrows():
         doc_dict = dict(doc)
+
         for key in doc_dict.keys():
             if pd.isna(doc_dict[key]):
                 doc_dict[key] = None
-    
+
         data = {
             "_index": index,
             "_id": idx,
