@@ -5,7 +5,6 @@ from ElasticSettings.topics import create_run, create_eval
 from ElasticSettings.query import get_query
 from elasticsearch import Elasticsearch
 from credentials import username, password
-import os
 import json
 
 from pprint import pprint
@@ -58,8 +57,8 @@ def main(skip_index: bool = False):
     print("P5", run_dict["evaluation"]["P_5"])
     print("P10", run_dict["evaluation"]["P_10"])
     print("P100", run_dict["evaluation"]["P_100"])
-    print("rel_ret", run_dict["evaluation"]["num_rel_ret"])
+    print("num_rel_ret", run_dict["evaluation"]["num_rel_ret"])
     
 if __name__ == '__main__':
     logging.basicConfig(level=logging.ERROR)
-    main(skip_index=True)  
+    main(skip_index=False)  
