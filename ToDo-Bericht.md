@@ -1,0 +1,11 @@
+ToDos für Abgabe am 23.01.23:
+-Aufteilung der einzelnen Berichtpunkte
+  -Problemstellung:         Pexem
+  -Methodik:                luucafrank
+  -Studienzusammenfassung:  LauraFredrich
+-Sollte ein Glossar erstellt werden, um Fachspezifischebegriffe erklärt werden?
+  -P_5
+  -Precision
+  -Recall
+  -Query
+-Erstellung PPP
