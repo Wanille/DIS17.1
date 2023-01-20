@@ -61,4 +61,4 @@ def main(skip_index: bool = False):
     
 if __name__ == '__main__':
     logging.basicConfig(level=logging.ERROR)
-    main(skip_index=False)  
+    main(skip_index=True)  
