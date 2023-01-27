@@ -1,0 +1,10 @@
+\begin{tabular}{l l l l l l r}
+Konfiguration & P\_5 & P\_10 & P\_20 & ndcg & map & num\_rel\_ret \\
+\hline
+standart & {\cellcolor{lightgreen}} 0.800 & {\cellcolor{lightgreen}} 0.746 & {\cellcolor{lightgreen}} 0.714 & 0.454 & 0.253 & 11090 \\
+standart + keywords & 0.776 & 0.738 & 0.707 & {\cellcolor{lightgreen}} 0.459 & 0.253 & {\cellcolor{lightgreen}} 11213 \\
+standart + keywords - decay & 0.740 & 0.698 & 0.656 & 0.426 & 0.217 & 10537 \\
+standart - tie breaker & 0.760 & 0.714 & 0.683 & 0.448 & 0.245 & 11034 \\
+standart - boosting & {\cellcolor{lightgreen}} 0.800 & {\cellcolor{lightgreen}} 0.746 & {\cellcolor{lightgreen}} 0.714 & 0.456 & {\cellcolor{lightgreen}} 0.254 & 11134 \\
+standart - decay & 0.736 & 0.704 & 0.665 & 0.429 & 0.222 & 10605 \\
+\end{tabular}

@@ -8,7 +8,8 @@ def get_query(q: str):
                         "type": "cross_fields",
                         "fields": [
                             "title^1.05",
-                            "abstract"
+                            "abstract",
+                            "keywords"
                         ],
                         "tie_breaker": 0.69
                     }
@@ -17,7 +18,7 @@ def get_query(q: str):
                     "publish_time": {
                         "origin": "2020-05",
                         "scale": "100d",
-                        "decay": 0.9
+                        "decay": 0.9,
                     }
                 }
             }

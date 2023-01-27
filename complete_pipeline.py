@@ -30,13 +30,13 @@ def main(skip_index: bool = False):
             pass
 
         es.indices.create(index=index_name, mappings=mappings, settings=settings)
-        index_data(df=data, index=index_name, es=es)
+        index_data(df=data, index=index_name, es=es, keywords="covid_topic_keywords.json")
         
 
     topics_path = "data/topics-rnd5_covid-complete.xml"
     qrels_path = "data/qrels-covid_d5_j0.5-5_covid-complete.txt"
 
-    runs_folder = "runs/"
+    runs_folder = "runs/query_testing/"
 
     run_name = create_run(topics_path=topics_path, es=es, index=index_name, runs_folder=runs_folder)
     run_path = runs_folder + run_name

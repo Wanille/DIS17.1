@@ -1,0 +1,197 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%
+
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage{pgf}
+\definecolor{lightgreen}{rgb}{0.4, 1, 0.4}
+\definecolor{lightred}{rgb}{1, 0.31, 0.31}
+
+\begin{document}
+%
+\title{Contribution Title\thanks{Supported by organization x.}}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{First Author\inst{1}\orcidID{0000-1111-2222-3333} \and
+Second Author\inst{2,3}\orcidID{1111-2222-3333-4444} \and
+Third Author\inst{3}\orcidID{2222--3333-4444-5555}}
+%
+\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Princeton University, Princeton NJ 08544, USA \and
+Springer Heidelberg, Tiergartenstr. 17, 69121 Heidelberg, Germany
+\email{lncs@springer.com}\\
+\url{http://www.springer.com/gp/computer-science/lncs} \and
+ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
+\email{\{abc,lncs\}@uni-heidelberg.de}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+The abstract should briefly summarize the contents of the paper in
+150--250 words.
+
+\keywords{First keyword  \and Second keyword \and Another keyword.}
+\end{abstract}
+%
+%
+%
+\section{First Section}
+\subsection{A Subsection Sample}
+Please note that the first paragraph of a section or subsection is
+not indented. The first paragraph that follows a table, figure,
+equation etc. does not need an indent, either.
+
+Subsequent paragraphs, however, are indented.
+
+\subsubsection{Sample Heading (Third Level)} Only two levels of
+headings should be numbered. Lower level headings remain unnumbered;
+they are formatted as run-in headings.
+
+\paragraph{Sample Heading (Fourth Level)}
+The contribution should contain no more than four levels of headings.
+
+\noindent Displayed equations are centered and set on a separate
+line.
+\begin{equation}
+x + y = z
+\end{equation}
+
+\begin{tabular}{l l l l l l r}
+    Runs & P\_5 & P\_10 & P\_20 & ndcg & map & num\_rel\_ret \\
+    \hline
+    \hline
+    baseline & 0.512 & 0.510 & 0.452 & 0.362 & 0.164 & 9420 \\
+    \hline
+    1 & 0.638 & 0.617 & 0.564 & 0.231 & 0.117 & 5207 \\
+    2 & 0.616 & 0.624 & 0.578 & 0.386 & 0.187 & 9832 \\
+    3 & 0.057 & 0.045 & 0.038 & 0.031 & 0.005 & 1130 \\
+    4 & 0.646 & 0.560 & 0.529 & 0.198 & 0.094 & 4354 \\
+    5 & 0.646 & 0.581 & 0.569 & 0.251 & 0.126 & 5872 \\
+    6 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    7 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    8 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    9 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    10 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    11 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    12 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    13 & 0.020 & 0.014 & 0.014 & 0.019 & 0.001 & 643 \\
+    14 & 0.016 & 0.010 & 0.012 & 0.021 & 0.001 & 685 \\
+    15 & 0.296 & 0.204 & 0.131 & 0.030 & 0.003 & 608 \\
+    16 & 0.328 & 0.226 & 0.137 & 0.036 & 0.004 & 817 \\
+    17 & 0.296 & 0.204 & 0.131 & 0.030 & 0.003 & 608 \\
+    18 & 0.468 & 0.474 & 0.445 & 0.383 & 0.181 & 9965 \\
+    19 & 0.312 & 0.234 & 0.145 & 0.031 & 0.003 & 608 \\
+    20 & 0.312 & 0.234 & 0.145 & 0.031 & 0.003 & 608 \\
+    21 & 0.312 & 0.234 & 0.145 & 0.031 & 0.003 & 608 \\
+    22 & 0.312 & 0.234 & 0.145 & 0.031 & 0.003 & 608 \\
+    23 & 0.312 & 0.234 & 0.145 & 0.031 & 0.003 & 608 \\
+    24 & 0.272 & 0.178 & 0.112 & 0.028 & 0.003 & 608 \\
+    25 & 0.296 & 0.228 & 0.139 & 0.031 & 0.004 & 608 \\
+    26 & 0.296 & 0.226 & 0.137 & 0.031 & 0.003 & 612 \\
+    27 & 0.688 & 0.678 & 0.652 & 0.397 & 0.199 & 9914 \\
+    28 & 0.292 & 0.226 & 0.138 & 0.031 & 0.004 & 612 \\
+    29 & 0.020 & 0.010 & 0.012 & 0.021 & 0.001 & 685 \\
+    30 & 0.020 & 0.010 & 0.012 & 0.021 & 0.001 & 685 \\
+    31 & 0.688 & 0.678 & 0.652 & 0.397 & 0.199 & 9914 \\
+    32 & 0.612 & 0.604 & 0.580 & 0.405 & 0.203 & 10276 \\
+    33 & 0.612 & 0.604 & 0.580 & 0.405 & 0.203 & 10276 \\
+    34 & 0.612 & 0.604 & 0.580 & 0.405 & 0.203 & 10276 \\
+    35 & 0.612 & 0.604 & 0.580 & 0.405 & 0.203 & 10276 \\
+    36 & 0.692 & 0.672 & 0.638 & 0.403 & 0.202 & 10128 \\
+    37 & 0.652 & 0.660 & 0.600 & 0.387 & 0.188 & 9715 \\
+    38 & 0.680 & 0.662 & 0.620 & 0.408 & 0.205 & 10261 \\
+    39 & 0.680 & 0.662 & 0.620 & 0.408 & 0.206 & 10259 \\
+    40 & 0.676 & 0.666 & 0.625 & 0.408 & 0.205 & 10243 \\
+    41 & 0.692 & 0.658 & 0.624 & 0.385 & 0.187 & 9669 \\
+    42 & 0.664 & 0.656 & 0.611 & 0.405 & 0.201 & 10128 \\
+    43 & 0.748 & 0.708 & 0.673 & 0.439 & 0.236 & 10846 \\
+    44 & 0.736 & 0.704 & 0.667 & 0.437 & 0.234 & 10809 \\
+    45 & 0.740 & 0.716 & 0.682 & 0.442 & 0.241 & 10931 \\
+    46 & 0.720 & 0.702 & 0.676 & 0.444 & 0.242 & 10966 \\
+    47 & 0.720 & 0.702 & 0.666 & 0.445 & 0.242 & 11015 \\
+    48 & 0.740 & 0.722 & 0.680 & 0.442 & 0.240 & 10927 \\
+    49 & 0.744 & 0.720 & 0.680 & 0.442 & 0.240 & 10911 \\
+    50 & {\cellcolor{lightgreen}} 0.800 & {\cellcolor{lightgreen}} 0.746 & {\cellcolor{lightgreen}} 0.714 & 0.456 & {\cellcolor{lightgreen}} 0.254 & 11134 \\
+    51 & 0.764 & 0.726 & 0.700 & 0.455 & 0.246 & 11127 \\
+    52 & 0.776 & 0.738 & 0.707 & {\cellcolor{lightgreen}} 0.459 & 0.253 & 11213 \\
+    53 & 0.776 & 0.744 & 0.705 & {\cellcolor{lightgreen}} 0.459 & 0.254 & {\cellcolor{lightgreen}} 11230 \\
+    \end{tabular}
+    
+    \begin{equation}
+        \exp ((\lambda * \max(0,| fieldvalue \textsubscript{doc} - origin | - offset)) \\
+        \lambda = \ln(decay) / scale)  
+    \end{equation}
+    
+    
+\begin{theorem}
+This is a sample theorem. The run-in heading is set in bold, while
+the following text appears in italics. Definitions, lemmas,
+propositions, and corollaries are styled the same way.
+\end{theorem}
+%
+% the environments 'definition', 'lemma', 'proposition', 'corollary',
+% 'remark', and 'example' are defined in the LLNCS documentclass as well.
+%
+\begin{proof}
+Proofs, examples, and remarks have the initial word in italics,
+while the following text appears in normal font.
+\end{proof}
+\subsubsection{Acknowledgements} Please place your acknowledgments at
+the end of the paper, preceded by an unnumbered run-in heading (i.e.
+3rd-level heading).
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\begin{thebibliography}{8}
+\bibitem{ref_article1}
+Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+
+\bibitem{ref_lncs1}
+Author, F., Author, S.: Title of a proceedings paper. In: Editor,
+F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
+Springer, Heidelberg (2016). \doi{10.10007/1234567890}
+
+\bibitem{ref_book1}
+Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
+Location (1999)
+
+\bibitem{ref_proc1}
+Author, A.-B.: Contribution title. In: 9th International Proceedings
+on Proceedings, pp. 1--2. Publisher, Location (2010)
+
+\bibitem{ref_url1}
+LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
+Oct 2017
+\end{thebibliography}
+\end{document}

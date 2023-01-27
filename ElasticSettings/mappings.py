@@ -31,6 +31,10 @@ mappings = {
             "analyzer": "my-analyzer",
             "similarity": "my-similarity"
         },
+        "keywords": {
+            "type": "text",
+            "similarity": "my-similarity"
+        },
         "publish_time": {
             "type": "date"
         },

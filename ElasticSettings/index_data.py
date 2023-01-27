@@ -4,8 +4,7 @@ import logging
 from elasticsearch import Elasticsearch
 from elasticsearch.client import IndicesClient
 from elasticsearch.helpers import bulk
-
-from ElasticSettings.synonyms import synonyms_replacer
+import json
 
 logging.basicConfig(level=logging.INFO)
 
@@ -32,9 +31,11 @@ def check_float(value) -> bool:
         return pd.NA
 
     
-def index_data(df: pd.DataFrame, index: str, es: Elasticsearch):
-    ic = IndicesClient(es) 
+def index_data(df: pd.DataFrame, index: str, es: Elasticsearch, keywords = None):
     bulk_data = []
+
+    if keywords:
+        keywords_ls = json.load(open(keywords, "r"))
     
     for idx, doc in df.iterrows():
         doc_dict = dict(doc)
@@ -42,6 +43,21 @@ def index_data(df: pd.DataFrame, index: str, es: Elasticsearch):
         for key in doc_dict.keys():
             if pd.isna(doc_dict[key]):
                 doc_dict[key] = None
+
+
+        if keywords:
+            keywords_in_text = []
+            text_complete = ""
+            if type(doc_dict["abstract"]) == str:
+                text_complete += doc_dict["abstract"]
+            if type(doc_dict["title"]) == str:
+                text_complete += doc_dict["title"]
+
+            for keyword in keywords_ls:
+                if keyword in text_complete:
+                    keywords_in_text.append(keyword)
+
+            doc_dict["keywords"] = " ".join(keywords_in_text)
 
         data = {
             "_index": index,
